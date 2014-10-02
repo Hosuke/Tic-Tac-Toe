@@ -1,0 +1,48 @@
+<!--
+    By Hosuke (Huang Geyang)
+    github.com/hosuke
+ -->
+<html>
+    <head>
+        <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" type="text/css" href="css.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
+        <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+        <script src='https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js'></script>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="mp3.js"></script>
+
+    </head>
+    <body ng-app="tttApp">
+
+
+        <div class="content" ng-controller="tttController">
+            <h3>Tic-Tac-Toe</h3>
+            <div class="board" ng-model="ttt">
+                <div class="row">
+                    <div id="cell_top_left" ng-click="clicked('tl');">{{ttt.tl}}</div>
+                    <div id="cell_top_center" ng-click="clicked('tc');">{{ttt.tc}}</div>
+                    <div id="cell_top_right" ng-click="clicked('tr');">{{ttt.tr}}</div>
+                </div>
+                <div class="row">
+                    <div id="cell_middle_left" ng-click="clicked('ml');">{{ttt.ml}}</div>
+                    <div id="cell_middle_center" ng-click="clicked('mc');">{{ttt.mc}}</div>
+                    <div id="cell_middle_right" ng-click="clicked('mr');">{{ttt.mr}}</div>
+                </div>
+                <div class="row">
+                    <div id="cell_bottom_left" ng-click="clicked('bl');">{{ttt.bl}}</div>
+                    <div id="cell_bottom_center" ng-click="clicked('bc');">{{ttt.bc}}</div>
+                    <div id="cell_bottom_right" ng-click="clicked('br');">{{ttt.br}}</div>
+                </div>
+            </div>
+
+            <div class="text">
+                <input id="reset_game" type="button" value="Reset Game" ng-click="reset()"/>
+            </div>
+
+            <div class="text" ng-model="ttt">
+                Current Turn: <span id="current_turn">{{ttt.cur}}</span>
+            </div>
+        </div>
+    </body>
+</html>
