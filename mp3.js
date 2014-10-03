@@ -12,6 +12,15 @@
 
 var tttApp = angular.module("tttApp",["firebase"]);
 
+tttApp.directive("grid", function(){
+    return function(scope, element){
+        element.bind("DOMSubtreeModified",function(){
+            if (element.html() == "X") element.css("color", "#dd9bb1");
+            if (element.html() == "O") element.css("color", "#8bcd85");
+        });
+    }
+});
+
 tttApp.controller('tttController', ['$scope','$firebase',
     function($scope, $firebase){
         var ref = new Firebase("https://amber-torch-1305.firebaseio.com/ttt");
@@ -56,7 +65,6 @@ tttApp.controller('tttController', ['$scope','$firebase',
             if ($scope.ttt[pos] === "" && $scope.ttt.start) {
                 sync.$set(pos,$scope.ttt.cur);
                 var setCur = $scope.ttt.cur == "X"? "O":"X";
-                console.log(setCur);
                 sync.$set("cur",setCur);
             }
         }

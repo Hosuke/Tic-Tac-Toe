@@ -1,9 +1,43 @@
+@font-face {
+    font-family: 'ProximaNova';
+    src: url("fonts/proximanovasoft-regular-webfont.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal; }
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url("fonts/proximanovasoft-medium-webfont.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal; }
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url("fonts/proximanovasoft-semibold-webfont.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal; }
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url("fonts/proximanovasoft-bold-webfont.ttf") format('truetype');
+    font-weight: 900;
+    font-style: normal; }
+
 .content
 {
     width: 160px;
     margin: 0px auto;
 }
 
+body {
+    background-color: #f1efd4;
+}
+
+h3 {
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-family: ProximaNova, Arial, sans-serif;
+    font-weight: 700;
+}
 span #current_turn
 {
     font-weight: bold;
@@ -25,7 +59,8 @@ span #current_turn
     font-size: 35px;
     padding-top: 5px;
     font-weight: bold;
-    font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+    /*font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;*/
+    font-family: ProximaNova, Arial, sans-serif;
 }
 
 #cell_top_left { border-width: 0px 2px 2px 0px; }
@@ -45,4 +80,5 @@ span #current_turn
     clear: both;
     padding-top: 20px;
     text-align: center;
+    font-family: ProximaNova, Arial, sans-serif;
 }
