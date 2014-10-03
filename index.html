@@ -6,7 +6,9 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tic-Tac-Toe</title>
+        <link rel="stylesheet" type="text/css" href="buttons/css/buttons.css"/>
         <link rel="stylesheet" type="text/css" href="css.css" />
+        <script src="buttons/js/buttons.js"></script>
         <script src="http://cdn.bootcss.com/angular.js/1.3.0-beta.8/angular.min.js"></script>
         <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
         <script src='https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js'></script>
@@ -18,7 +20,7 @@
 
 
         <div class="content" ng-controller="tttController">
-            <h3>Tic-Tac-Toe</h3>
+            <h1>Tic-Tac-Toe</h1>
             <div class="board" ng-model="ttt">
                 <div class="row">
                     <div grid id="cell_top_left" ng-click="clicked('tl');">{{ttt.tl}}</div>
@@ -38,7 +40,7 @@
             </div>
 
             <div class="text">
-                <input id="reset_game" type="button" value="Reset Game" ng-click="reset()"/>
+                <a id="reset_game" type="button" class="button button-3d-primary button-rounded" ng-click="reset()">Reset Game</a>
             </div>
 
             <div class="text" ng-model="ttt">
